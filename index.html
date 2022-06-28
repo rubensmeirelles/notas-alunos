@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Cálculo de média das provas</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="container">
+	<h2>Programa para calcular a média das notas das provas - feito com JavaScript</h2>
+	<form name="frmAluno">
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-6">
+					<label for="aluno">Nome do aluno</label>
+					<input type="text" id="nome_aluno" name="nome_aluno" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<label for="ano">Ano letivo</label>
+					<input type="text" id="ano" name="ano" class="form-control">
+				</div>
+			</div><!--end row-->
+			<div class="row mt-5">
+				<div class="col-md-12">
+					<h4 class="text-center">Lançamento de notas</h4>
+				</div>
+				<div class="col-md-3 mt-3">
+					<input type="text" id="nota1" class="form-control" placeholder="Nota 1">
+				</div>
+				<div class="col-md-3 mt-3">
+					<input type="text" id="nota2" class="form-control" placeholder="Nota 2">
+				</div>
+				<div class="col-md-3 mt-3">
+					<input type="text" id="nota3" class="form-control" placeholder="Nota 3">
+				</div>
+				<div class="col-md-3 mt-3">
+					<input type="text" id="nota4" class="form-control" placeholder="Nota 4">
+				</div>
+			</div><!--end row-->
+			<div class="row">
+				<div class="col-md-3 mt-3">
+					<input type="text" id="falta" class="form-control" placeholder="Número de faltas">
+				</div>
+			</div>
+		</div> <!--end form-group-->
+		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="return calcular_media()">Calcular Média</button>
+	</form> <!--end form-->
+
+	<h4 class="mt-2">Resultado <span id="anoLetivo"></span></h4>
+
+	<div class="media mt-1">
+	  <img id="img-res" src="img/default.jpg" class="mr-5" alt="...">
+	  <div class="media-body">
+		<h5 class="mt-0" id="nomeAluno">Nome do aluno</h5>
+		<button type="" class="btn btn-success btn-lg mt-1">
+			Média <span class="badge badge-light" id="media">0.00</span>
+			<span class="sr-only">unread messages</span>
+	  </button>
+	    <h3>Situação: <span id="info">...</span></h3>
+	  </div>
+	</div>
+	<button type="button" class="btn btn-warning btn-lg btn-block" onclick="novo()">Novo Lançamento</button>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
